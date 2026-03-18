@@ -123,3 +123,14 @@ if modelo_pm:
 
         st.progress(probabilidade)
         st.caption("Modelo preditivo blindado contra viés de sobrevivência. Limiar otimizado (Recall=75%) para maximizar a retenção de alunos.")
+        
+        st.metric("Probabilidade de Risco", f"{risco_percentual:.2f}%")
+
+        
+        st.info("""
+        🔎 **Sobre o modelo:**
+        Este simulador utiliza Random Forest, um modelo de Machine Learning que identifica padrões
+        nos dados históricos para prever risco de evasão ou defasagem escolar.
+
+        O modelo foi ajustado para priorizar a detecção de alunos em risco (recall alto).
+        """)
